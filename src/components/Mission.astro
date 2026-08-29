@@ -1,33 +1,20 @@
 ---
-import { SITE_NAME } from "../consts";
+import data from "../data/site.json";
+
+const { mission } = data;
 ---
 
 <section id="mission" class="scroll-mt-24 border-b border-slate-200 bg-slate-50">
   <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
     <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">
-      Why this matters
+      {mission.subtitle}
     </p>
     <div class="mt-6 max-w-3xl space-y-6 text-lg leading-relaxed text-slate-700">
-      <p>
-        Advanced AI systems are being deployed faster than our understanding of
-        how to make them safe, predictable, and accountable. This raises
-        technical questions regarding how we ensure an autonomous system will
-        behave as intended, as well as questions of policy, ethics, and
-        institutional design: who decides what these systems should be permitted
-        to do, and how?
-      </p>
-      <p>
-        <span class="font-semibold text-slate-900">{SITE_NAME}</span> is a
-        student society at Western University dedicated to studying these
-        questions in depth. We read, discuss, and write about the technical and
-        societal risks posed by advanced AI, and we work to build a community at
-        Western capable of engaging with this problem from more than one
-        direction.
-      </p>
-      <p class="font-semibold text-slate-900">
-        We believe this requires more than any single department or discipline
-        can offer.
-      </p>
+      {
+        mission.paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))
+      }
     </div>
   </div>
 </section>

@@ -1,25 +1,20 @@
 ---
-import { SITE_NAME, SUBTITLE } from "../consts";
+import data from "../data/site.json";
 
-const links = [
-  { label: "About", href: "#about" },
-  { label: "Our Approach", href: "#approach" },
-  { label: "Get Involved", href: "#get-involved" },
-  { label: "Newsletter", href: "#newsletter" },
-];
+const { site, navLinks } = data;
 ---
 
 <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
     <a href="#about" class="flex flex-col leading-tight">
       <span class="text-sm font-semibold tracking-tight text-slate-900">
-        {SITE_NAME}
+        {site.name}
       </span>
-      <span class="text-xs text-slate-500">{SUBTITLE}</span>
+      <span class="text-xs text-slate-500">{site.subtitle}</span>
     </a>
     <ul class="hidden items-center gap-8 sm:flex">
       {
-        links.map((link) => (
+        navLinks.map((link) => (
           <li>
             <a
               href={link.href}

@@ -1,31 +1,26 @@
 ---
-import { SITE_NAME, SUBTITLE, SLACK_URL, SUBSTACK_URL } from "../consts";
+import data from "../data/site.json";
 
-const links = [
-  { label: "About", href: "#about" },
-  { label: "Our Approach", href: "#approach" },
-  { label: "Get Involved", href: "#get-involved" },
-  { label: "Newsletter", href: "#newsletter" },
-];
+const { site, navLinks, links } = data;
 ---
 
 <footer class="border-t border-slate-200 bg-slate-900 text-slate-300">
   <div class="mx-auto max-w-6xl px-6 py-16">
     <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
       <div>
-        <p class="font-semibold text-white">{SITE_NAME}</p>
-        <p class="mt-1 text-sm text-slate-400">{SUBTITLE}</p>
+        <p class="font-semibold text-white">{site.name}</p>
+        <p class="mt-1 text-sm text-slate-400">{site.subtitle}</p>
       </div>
       <nav class="flex flex-col gap-3 text-sm">
         {
-          links.map((link) => (
+          navLinks.map((link) => (
             <a href={link.href} class="transition-colors hover:text-white">
               {link.label}
             </a>
           ))
         }
         <a
-          href={SUBSTACK_URL}
+          href={links.substack}
           target="_blank"
           rel="noopener noreferrer"
           class="transition-colors hover:text-white"
@@ -33,7 +28,7 @@ const links = [
           Substack
         </a>
         <a
-          href={SLACK_URL}
+          href={links.slack}
           target="_blank"
           rel="noopener noreferrer"
           class="transition-colors hover:text-white"

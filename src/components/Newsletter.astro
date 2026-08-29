@@ -1,22 +1,24 @@
 ---
-import { SUBSTACK_URL } from "../consts";
+import data from "../data/site.json";
+
+const { newsletter, links } = data;
 ---
 
 <section id="newsletter" class="scroll-mt-24">
   <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
     <h2 class="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-      Newsletter
+      {newsletter.title}
     </h2>
     <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-      Follow our Substack for our writing on AI safety and governance.
+      {newsletter.body}
     </p>
     <a
-      href={SUBSTACK_URL}
+      href={links.substack}
       target="_blank"
       rel="noopener noreferrer"
       class="mt-8 inline-block rounded-lg bg-slate-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700"
     >
-      Visit our Substack
+      {newsletter.cta}
     </a>
   </div>
 </section>

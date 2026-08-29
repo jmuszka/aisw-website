@@ -1,24 +1,24 @@
 ---
-import { SLACK_URL, SITE_NAME } from "../consts";
+import data from "../data/site.json";
+
+const { getInvolved, links } = data;
 ---
 
 <section id="get-involved" class="scroll-mt-24 border-b border-slate-200 bg-slate-50">
   <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
     <h2 class="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-      Get Involved
+      {getInvolved.title}
     </h2>
     <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-      {SITE_NAME} is a new society at Western, and we are building our
-      programming from the ground up. If you're interested in getting involved
-      as a member, contributor, or collaborator, reach out below.
+      {getInvolved.body}
     </p>
     <a
-      href={SLACK_URL}
+      href={links.slack}
       target="_blank"
       rel="noopener noreferrer"
       class="mt-8 inline-block rounded-lg bg-slate-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-700"
     >
-      Join our Slack
+      {getInvolved.cta}
     </a>
   </div>
 </section>

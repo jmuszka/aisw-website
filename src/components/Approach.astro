@@ -1,34 +1,21 @@
 ---
-const pillars = [
-  {
-    title: "Technical",
-    body: "Understanding how modern AI systems work, where they fail, and what makes them difficult to align, interpret, and evaluate.",
-  },
-  {
-    title: "Policy & Governance",
-    body: "Examining the institutions, regulations, and international frameworks needed to manage the deployment of increasingly capable systems.",
-  },
-  {
-    title: "Philosophy & Ethics",
-    body: "Asking what 'safe' and 'aligned' actually mean — questions of value, uncertainty, and responsibility that technical work alone cannot answer.",
-  },
-];
+import data from "../data/site.json";
+
+const { approach } = data;
 ---
 
 <section id="approach" class="scroll-mt-24 border-b border-slate-200">
   <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
     <h2 class="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-      Our Approach
+      {approach.title}
     </h2>
     <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-      AI risk isn't purely a technical problem or a policy problem: it spans
-      computer science, public policy, philosophy and ethics, economics, and
-      law. We think that's a strength, not a complication.
+      {approach.intro}
     </p>
 
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
-        pillars.map((pillar) => (
+        approach.pillars.map((pillar) => (
           <div class="rounded-xl border border-slate-200 bg-white p-6">
             <h3 class="text-lg font-semibold text-slate-900">{pillar.title}</h3>
             <p class="mt-3 text-sm leading-relaxed text-slate-600">
@@ -38,11 +25,11 @@ const pillars = [
         ))
       }
       <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6">
-        <h3 class="text-lg font-semibold text-slate-900">+ More</h3>
+        <h3 class="text-lg font-semibold text-slate-900">
+          {approach.more.title}
+        </h3>
         <p class="mt-3 text-sm leading-relaxed text-slate-600">
-          We are growing to include economics, law, and other disciplines. If
-          you think that your field belongs in this conversation, then it
-          probably does.
+          {approach.more.body}
         </p>
       </div>
     </div>

@@ -1,0 +1,62 @@
+{
+  "site": {
+    "name": "AI Safety & Governance",
+    "subtitle": "Western University"
+  },
+  "links": {
+    "slack": "#",
+    "substack": "#"
+  },
+  "navLinks": [
+    { "label": "About", "href": "#about" },
+    { "label": "Our Approach", "href": "#approach" },
+    { "label": "Get Involved", "href": "#get-involved" },
+    { "label": "Newsletter", "href": "#newsletter" }
+  ],
+  "hero": {
+    "tagline": "Understanding and governing advanced AI, from every angle",
+    "subhead": "A student society bringing together technology, policy, philosophy, and business perspectives to study the risks of AI and how to mitigate and adapt to them.",
+    "substackCta": "Read our Substack",
+    "getInvolvedCta": "Get Involved"
+  },
+  "mission": {
+    "subtitle": "Why this matters",
+    "paragraphs": [
+      "Advanced AI systems are being deployed faster than our understanding of how to make them safe, predictable, and accountable. This raises technical questions regarding how we ensure an autonomous system will behave as intended, as well as questions of policy, ethics, and institutional design: who decides what these systems should be permitted to do, and how?",
+      "AI Safety & Governance is a student society at Western University dedicated to studying these questions in depth. We read, discuss, and write about the technical and societal risks posed by advanced AI, and we work to build a community at Western capable of engaging with this problem from more than one direction.",
+      "We believe this requires more than any single department or discipline can offer."
+    ]
+  },
+  "approach": {
+    "title": "Our Approach",
+    "intro": "AI risk isn't purely a technical problem or a policy problem: it spans computer science, public policy, philosophy and ethics, economics, and law. We think that's a strength, not a complication.",
+    "pillars": [
+      {
+        "title": "Technical",
+        "body": "Understanding how modern AI systems work, where they fail, and what makes them difficult to align, interpret, and evaluate."
+      },
+      {
+        "title": "Policy & Governance",
+        "body": "Examining the institutions, regulations, and international frameworks needed to manage the deployment of increasingly capable systems."
+      },
+      {
+        "title": "Philosophy & Ethics",
+        "body": "Asking what 'safe' and 'aligned' actually mean — questions of value, uncertainty, and responsibility that technical work alone cannot answer."
+      }
+    ],
+    "more": {
+      "title": "+ More",
+      "body": "We are growing to include economics, law, and other disciplines. If you think that your field belongs in this conversation, then it probably does."
+    }
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "body": "AI Safety & Governance is a new society at Western, and we are building our programming from the ground up. If you're interested in getting involved as a member, contributor, or collaborator, reach out below.",
+    "cta": "Join our Slack"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "body": "Follow our Substack for our writing on AI safety and governance.",
+    "cta": "Visit our Substack"
+  }
+}
