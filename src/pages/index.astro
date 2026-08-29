@@ -1,7 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Mission from "../components/Mission.astro";
+import Approach from "../components/Approach.astro";
+import GetInvolved from "../components/GetInvolved.astro";
+import Newsletter from "../components/Newsletter.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Home | AI Safety & Governance UWO" description="Landing page for AI Safety & Governance at Western">
-  <h1>Hello, World!</h1>
+<Layout title="Home | AI Safety & Governance" description="Landing page for AI Safety & Governance at Western">
+  <Navbar />
+  <main>
+    <Hero />
+    <Mission />
+    <Approach />
+    <GetInvolved />
+    <Newsletter />
+  </main>
+  <Footer />
 </Layout>
