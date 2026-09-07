@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import data from "../data/site.json";
+import { withBase } from "../lib/assets";
 
 const { site, seo, links } = data;
 
@@ -18,7 +19,7 @@ const {
 
 const baseUrl = Astro.site ?? new URL(Astro.url.origin);
 const canonicalURL = new URL(Astro.url.pathname, baseUrl);
-const imageURL = new URL(image, baseUrl);
+const imageURL = new URL(withBase(image), baseUrl);
 
 const sameAs = [links.slack, links.substack].filter((url) => url && url !== "#");
 
@@ -28,7 +29,7 @@ const organization = {
   name: site.name,
   alternateName: `${site.name} at ${site.subtitle}`,
   url: baseUrl.href,
-  logo: new URL(site.logo, baseUrl).href,
+  logo: new URL(withBase(site.logo), baseUrl).href,
   ...(sameAs.length > 0 && { sameAs }),
 };
 
@@ -58,8 +59,8 @@ const jsonLd = JSON.stringify([organization, webSite]);
     <meta name="theme-color" content="#4f2683" />
 
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href={withBase("/favicon.png")} />
+    <link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

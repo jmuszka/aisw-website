@@ -1,6 +1,7 @@
 ---
 import data from "../data/site.json";
 import { renderMarkdown } from "../lib/markdown";
+import { withBase } from "../lib/assets";
 
 const { hero, links } = data;
 const backgrounds = hero.backgrounds ?? [];
@@ -14,7 +15,7 @@ const backgrounds = hero.backgrounds ?? [];
           backgrounds.map((src, i) => (
             <div
               class="hero-bg absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
-              style={`background-image: url('${src}'); opacity: ${i === 0 ? "1" : "0"};`}
+              style={`background-image: url('${withBase(src)}'); opacity: ${i === 0 ? "1" : "0"};`}
               data-hero-bg
             ></div>
           ))

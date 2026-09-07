@@ -11,6 +11,7 @@ const siteData = JSON.parse(
 // https://astro.build/config
 export default defineConfig({
   site: siteData.site.url,
+  base: siteData.site.base,
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]

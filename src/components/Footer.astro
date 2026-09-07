@@ -1,5 +1,6 @@
 ---
 import data from "../data/site.json";
+import { withBase } from "../lib/assets";
 
 const { site, navLinks, links, footer } = data;
 ---
@@ -7,7 +8,7 @@ const { site, navLinks, links, footer } = data;
 <footer class="relative overflow-hidden bg-accent text-white/80">
   <div
     class="absolute inset-0 bg-cover bg-center"
-    style={`background-image: url('${site.footerBackground}')`}
+    style={`background-image: url('${withBase(site.footerBackground)}')`}
     aria-hidden="true"
   ></div>
   <div class="absolute inset-0 bg-accent/80 brightness-[75%]" aria-hidden="true"></div>
@@ -20,7 +21,7 @@ const { site, navLinks, links, footer } = data;
       <nav class="flex flex-col gap-3 text-sm">
         {
           navLinks.map((link) => (
-            <a href={link.href} class="transition-colors hover:text-white">
+            <a href={withBase(link.href)} class="transition-colors hover:text-white">
               {link.label}
             </a>
           ))

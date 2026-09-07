@@ -2,7 +2,8 @@
   "site": {
     "name": "AI Safety & Governance",
     "subtitle": "Western University",
-    "url": "https://example.com",
+    "url": "https://jmuszka.github.io",
+    "base": "/aisw-website/",
     "logo": "/logo_light_mono.svg",
     "footerBackground": "/footer-bg.webp"
   },
