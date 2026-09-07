@@ -1,17 +1,46 @@
 ---
 import "../styles/global.css";
+import data from "../data/site.json";
+
+const { site, seo, links } = data;
 
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
 }
 
 const {
-  title = "AISW Website",
-  description = "AISW Website",
+  title = seo.title,
+  description = seo.description,
+  image = seo.ogImage,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const baseUrl = Astro.site ?? new URL(Astro.url.origin);
+const canonicalURL = new URL(Astro.url.pathname, baseUrl);
+const imageURL = new URL(image, baseUrl);
+
+const sameAs = [links.slack, links.substack].filter((url) => url && url !== "#");
+
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  alternateName: `${site.name} at ${site.subtitle}`,
+  url: baseUrl.href,
+  logo: new URL(site.logo, baseUrl).href,
+  ...(sameAs.length > 0 && { sameAs }),
+};
+
+const webSite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: baseUrl.href,
+  description: seo.description,
+};
+
+const jsonLd = JSON.stringify([organization, webSite]);
 ---
 
 <!doctype html>
@@ -22,18 +51,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={seo.author} />
+    <meta name="publisher" content={site.name} />
+    <meta name="copyright" content={site.name} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#4f2683" />
 
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:alt" content={`${site.name} at ${site.subtitle}`} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+
+    <script type="application/ld+json" set:html={jsonLd} />
 
     <script>
       (function (s, e, n, d, er) {

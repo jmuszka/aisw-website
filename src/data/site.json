@@ -2,8 +2,15 @@
   "site": {
     "name": "AI Safety & Governance",
     "subtitle": "Western University",
+    "url": "https://example.com",
     "logo": "/logo_light_mono.svg",
     "footerBackground": "/footer-bg.webp"
+  },
+  "seo": {
+    "title": "AI Safety & Governance | Western University",
+    "description": "AI Safety & Governance is a student society at Western University studying the technical and societal risks of advanced AI from computer science, policy, philosophy, and business perspectives.",
+    "author": "Josh Muszka",
+    "ogImage": "/hero-technical.webp"
   },
   "links": {
     "slack": "https://join.slack.com/t/aisafetygovernanceuwo/shared_invite/zt-46kpwzpxi-yR2EsmqizamXZ2LtEp1iSw",
