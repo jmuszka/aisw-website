@@ -12,13 +12,21 @@ const { getInvolved, links } = data;
     <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
       {getInvolved.body}
     </p>
-    <a
-      href={links.slack}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-8 inline-block rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
-    >
-      {getInvolved.cta}
-    </a>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href={links.slack}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
+      >
+        {getInvolved.cta}
+      </a>
+      <a
+        href="/join"
+        class="inline-block rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-100"
+      >
+        Join us
+      </a>
+    </div>
   </div>
 </section>
