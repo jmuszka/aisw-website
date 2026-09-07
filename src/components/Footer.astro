@@ -4,8 +4,14 @@ import data from "../data/site.json";
 const { site, navLinks, links } = data;
 ---
 
-<footer class="bg-accent text-white/80">
-  <div class="mx-auto max-w-6xl px-6 py-16">
+<footer class="relative overflow-hidden bg-accent text-white/80">
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style={`background-image: url('${site.footerBackground}')`}
+    aria-hidden="true"
+  ></div>
+  <div class="absolute inset-0 bg-accent/80 brightness-[75%]" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-6xl px-6 py-16">
     <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
       <div>
         <p class="font-semibold text-white">{site.name}</p>

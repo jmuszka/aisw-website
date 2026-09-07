@@ -2,7 +2,8 @@
   "site": {
     "name": "AI Safety & Governance",
     "subtitle": "Western University",
-    "logo": "/logo_light_mono.svg"
+    "logo": "/logo_light_mono.svg",
+    "footerBackground": "/footer-bg.webp"
   },
   "links": {
     "slack": "https://join.slack.com/t/aisafetygovernanceuwo/shared_invite/zt-46kpwzpxi-yR2EsmqizamXZ2LtEp1iSw",
