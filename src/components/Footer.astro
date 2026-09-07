@@ -1,7 +1,7 @@
 ---
 import data from "../data/site.json";
 
-const { site, navLinks, links } = data;
+const { site, navLinks, links, footer } = data;
 ---
 
 <footer class="relative overflow-hidden bg-accent text-white/80">
@@ -43,5 +43,8 @@ const { site, navLinks, links } = data;
         </a>
       </nav>
     </div>
+    <p class="mt-12 max-w-3xl border-t border-white/20 pt-6 text-xs leading-relaxed text-white/60">
+      {footer.disclaimer}
+    </p>
   </div>
 </footer>

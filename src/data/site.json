@@ -79,5 +79,8 @@
     "title": "Newsletter",
     "body": "Follow our Substack for our writing on AI safety and governance.",
     "cta": "Visit our Substack"
+  },
+  "footer": {
+    "disclaimer": "AI Safety & Governance is a student society and is not officially affiliated with Western University."
   }
 }
