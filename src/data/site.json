@@ -22,7 +22,13 @@
     "tagline": "Understanding and governing advanced AI, from every angle",
     "subhead": "A student society bringing together **technology, policy, philosophy, and business** perspectives to study the risks of AI and how to mitigate and adapt to them.",
     "substackCta": "Read our Substack",
-    "getInvolvedCta": "Get Involved"
+    "getInvolvedCta": "Get Involved",
+    "backgrounds": [
+      "/hero-technical.webp",
+      "/hero-legal.webp",
+      "/hero-parliament.webp",
+      "/hero-business.webp"
+    ]
   },
   "mission": {
     "subtitle": "Why this matters",

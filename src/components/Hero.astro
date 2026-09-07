@@ -3,10 +3,27 @@ import data from "../data/site.json";
 import { renderMarkdown } from "../lib/markdown";
 
 const { hero, links } = data;
+const backgrounds = hero.backgrounds ?? [];
 ---
 
-<section id="about" class="scroll-mt-24 border-b border-slate-200">
-  <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+<section id="about" class="relative scroll-mt-24 overflow-hidden border-b border-slate-200">
+  {
+    backgrounds.length > 0 && (
+      <>
+        {
+          backgrounds.map((src, i) => (
+            <div
+              class="hero-bg absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
+              style={`background-image: url('${src}'); opacity: ${i === 0 ? "1" : "0"};`}
+              data-hero-bg
+            ></div>
+          ))
+        }
+        <div class="absolute inset-0 bg-white/60" aria-hidden="true"></div>
+      </>
+    )
+  }
+  <div class="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
     <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
       {hero.tagline}
     </h1>
@@ -22,10 +39,26 @@ const { hero, links } = data;
       </a>
       <a
         href="#get-involved"
-        class="rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-100"
+        class="rounded-lg border border-slate-300 px-6 py-3 text-sm font-medium text-slate-900 transition-colors bg-secondary hover:bg-slate-100"
       >
         {hero.getInvolvedCta}
       </a>
     </div>
   </div>
 </section>
+
+<script>
+  const slides = document.querySelectorAll("[data-hero-bg]");
+
+  if (slides.length > 1) {
+    let current = 0;
+    const interval = 5000;
+
+    setInterval(() => {
+      const next = (current + 1) % slides.length;
+      slides[current].style.opacity = "0";
+      slides[next].style.opacity = "1";
+      current = next;
+    }, interval);
+  }
+</script>
