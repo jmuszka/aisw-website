@@ -30,5 +30,46 @@ const { site, navLinks } = data;
         ))
       }
     </ul>
+    <button
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      class="mobile-menu-toggle inline-flex items-center justify-center rounded-md p-2 text-white/80 transition-colors hover:text-white sm:hidden"
+    >
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path class="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+        <path class="menu-icon-close hidden" stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
   </nav>
+  <div class="mobile-menu hidden border-t border-white/10 bg-accent sm:hidden">
+    <ul class="mx-auto flex max-w-6xl flex-col px-6 py-4">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="block rounded-md px-2 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </header>
+
+<script>
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".mobile-menu");
+  const openIcon = document.querySelector(".menu-icon-open");
+  const closeIcon = document.querySelector(".menu-icon-close");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("hidden") === false;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    openIcon?.classList.toggle("hidden", isOpen);
+    closeIcon?.classList.toggle("hidden", !isOpen);
+  });
+</script>
