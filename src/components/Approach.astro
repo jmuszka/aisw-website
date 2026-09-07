@@ -16,7 +16,7 @@ const { approach } = data;
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         approach.pillars.map((pillar) => (
-          <div class="rounded-xl border border-slate-200 bg-white p-6">
+          <div class="rounded-xl border border-accent-secondary/40 bg-accent-secondary/25 p-6 transition-transform duration-200 hover:scale-[1.03]">
             {pillar.icon && (
               <Icon
                 name={pillar.icon}
@@ -28,7 +28,7 @@ const { approach } = data;
           </div>
         ))
       }
-      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6">
+      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 transition-transform duration-200 hover:scale-[1.03]">
         <h3 class="text-lg font-semibold text-slate-900">
           {approach.more.title}
         </h3>
