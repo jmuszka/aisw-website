@@ -1,16 +1,20 @@
 ---
 import data from "../data/site.json";
+import logo from "../assets/logo_light_mono.svg";
 
 const { site, navLinks } = data;
 ---
 
 <header class="sticky top-0 z-50 bg-accent">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="flex flex-col leading-tight">
-      <span class="text-sm font-semibold tracking-tight text-white">
-        {site.name}
+    <a href="/" class="flex items-center gap-3">
+      <img src={logo.src} alt={`${site.name} logo`} class="h-9 w-9" />
+      <span class="flex flex-col leading-tight">
+        <span class="text-sm font-semibold tracking-tight text-white">
+          {site.name}
+        </span>
+        <span class="text-xs text-white/70">{site.subtitle}</span>
       </span>
-      <span class="text-xs text-white/70">{site.subtitle}</span>
     </a>
     <ul class="hidden items-center gap-8 sm:flex">
       {
