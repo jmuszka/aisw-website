@@ -1,7 +1,8 @@
 {
   "site": {
     "name": "AI Safety & Governance",
-    "subtitle": "Western University"
+    "subtitle": "Western University",
+    "logo": "/logo_light_mono.svg"
   },
   "links": {
     "slack": "https://join.slack.com/t/aisafetygovernanceuwo/shared_invite/zt-46kpwzpxi-yR2EsmqizamXZ2LtEp1iSw",
@@ -18,16 +19,16 @@
   ],
   "hero": {
     "tagline": "Understanding and governing advanced AI, from every angle",
-    "subhead": "A student society bringing together technology, policy, philosophy, and business perspectives to study the risks of AI and how to mitigate and adapt to them.",
+    "subhead": "A student society bringing together **technology, policy, philosophy, and business** perspectives to study the risks of AI and how to mitigate and adapt to them.",
     "substackCta": "Read our Substack",
     "getInvolvedCta": "Get Involved"
   },
   "mission": {
     "subtitle": "Why this matters",
     "paragraphs": [
-      "Advanced AI systems are being deployed faster than our understanding of how to make them safe, predictable, and accountable. This raises technical questions regarding how we ensure an autonomous system will behave as intended, as well as questions of policy, ethics, and institutional design: who decides what these systems should be permitted to do, and how?",
+      "Advanced AI systems are being deployed faster than our understanding of how to make them safe, predictable, and accountable. This raises technical questions regarding **how we ensure an autonomous system will behave as intended**, as well as questions of policy, ethics, and institutional design: **who decides what these systems should be permitted to do, and how?**",
       "AI Safety & Governance is a student society at Western University dedicated to studying these questions in depth. We read, discuss, and write about the technical and societal risks posed by advanced AI, and we work to build a community at Western capable of engaging with this problem from more than one direction.",
-      "We believe this requires more than any single department or discipline can offer."
+      "**We believe this requires more than any single department or discipline can offer.**"
     ]
   },
   "approach": {

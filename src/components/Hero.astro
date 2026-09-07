@@ -1,5 +1,6 @@
 ---
 import data from "../data/site.json";
+import { renderMarkdown } from "../lib/markdown";
 
 const { hero, links } = data;
 ---
@@ -9,9 +10,7 @@ const { hero, links } = data;
     <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
       {hero.tagline}
     </h1>
-    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-      {hero.subhead}
-    </p>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600" set:html={renderMarkdown(hero.subhead)} />
     <div class="mt-8 flex flex-wrap gap-4">
       <a
         href={links.substack}

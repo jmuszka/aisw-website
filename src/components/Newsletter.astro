@@ -1,5 +1,6 @@
 ---
 import data from "../data/site.json";
+import { renderMarkdown } from "../lib/markdown";
 
 const { newsletter, links } = data;
 ---
@@ -9,9 +10,7 @@ const { newsletter, links } = data;
     <h2 class="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
       {newsletter.title}
     </h2>
-    <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-      {newsletter.body}
-    </p>
+    <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" set:html={renderMarkdown(newsletter.body)} />
     <a
       href={links.substack}
       target="_blank"

@@ -1,5 +1,6 @@
 ---
 import data from "../data/site.json";
+import { renderMarkdown } from "../lib/markdown";
 
 const { mission } = data;
 ---
@@ -12,7 +13,7 @@ const { mission } = data;
     <div class="mt-6 max-w-3xl space-y-6 text-lg leading-relaxed text-slate-700">
       {
         mission.paragraphs.map((paragraph) => (
-          <p>{paragraph}</p>
+          <p set:html={renderMarkdown(paragraph)} />
         ))
       }
     </div>
