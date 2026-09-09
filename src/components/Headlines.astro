@@ -1,0 +1,14 @@
+---
+import data from "../data/site.json";
+import { withBase } from "../lib/assets";
+
+const { headlines } = data;
+---
+
+<figure class="overflow-hidden rounded-2xl bg-white p-4 sm:p-6 lg:p-8" aria-label={headlines.alt}>
+  <img
+    src={withBase(headlines.src)}
+    alt={headlines.alt}
+    class="block h-auto w-full"
+  />
+</figure>

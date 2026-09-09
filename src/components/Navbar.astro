@@ -5,16 +5,14 @@ import { withBase } from "../lib/assets";
 const { site, navLinks } = data;
 ---
 
-<header class="sticky top-0 z-50 bg-accent">
+<header class="sticky top-0 z-50 bg-amethyst">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href={withBase("/")} class="flex items-center gap-3">
-      <img src={withBase(site.logo)} alt={`${site.name} logo`} class="h-9 w-9" />
-      <span class="flex flex-col leading-tight">
-        <span class="text-sm font-semibold tracking-tight text-white">
-          {site.name}
-        </span>
-        <span class="text-xs text-white/70">{site.subtitle}</span>
-      </span>
+    <a href={withBase("/")} class="flex items-center">
+      <img
+        src={withBase(site.wordmark)}
+        alt={`${site.name} ${site.subtitle}`}
+        class="h-12 w-auto sm:h-14"
+      />
     </a>
     <ul class="hidden items-center gap-8 sm:flex">
       {
@@ -22,7 +20,7 @@ const { site, navLinks } = data;
           <li>
             <a
               href={withBase(link.href)}
-              class="text-sm font-medium text-white/80 transition-colors hover:text-white"
+              class="font-sans text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
               {link.label}
             </a>
@@ -42,14 +40,14 @@ const { site, navLinks } = data;
       </svg>
     </button>
   </nav>
-  <div class="mobile-menu hidden border-t border-white/10 bg-accent sm:hidden">
+  <div class="mobile-menu hidden border-t border-white/10 bg-amethyst sm:hidden">
     <ul class="mx-auto flex max-w-6xl flex-col px-6 py-4">
       {
         navLinks.map((link) => (
           <li>
             <a
               href={withBase(link.href)}
-              class="block rounded-md px-2 py-2 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+              class="block rounded-md px-2 py-2 font-sans text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
             >
               {link.label}
             </a>
