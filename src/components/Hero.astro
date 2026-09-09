@@ -1,65 +1,34 @@
 ---
 import data from "../data/site.json";
-import { renderMarkdown } from "../lib/markdown";
 import { withBase } from "../lib/assets";
 
-const { hero, links } = data;
-const backgrounds = hero.backgrounds ?? [];
+const { hero } = data;
 ---
 
-<section id="about" class="relative scroll-mt-24 overflow-hidden border-b border-slate-200">
-  {
-    backgrounds.length > 0 && (
-      <>
-        {
-          backgrounds.map((src, i) => (
-            <div
-              class="hero-bg absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
-              style={`background-image: url('${withBase(src)}'); opacity: ${i === 0 ? "1" : "0"};`}
-              data-hero-bg
-            ></div>
-          ))
-        }
-        <div class="absolute inset-0 bg-white/60" aria-hidden="true"></div>
-      </>
-    )
-  }
-  <div class="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
-    <h1 class="max-w-3xl text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+<section
+  id="about"
+  class="relative min-h-[24rem] overflow-hidden bg-amethyst scroll-mt-24 sm:min-h-[27rem] lg:min-h-[31.5rem]"
+>
+  <div class="relative z-10 mx-auto max-w-6xl px-6 py-18 sm:py-24">
+    <h1 class="max-w-3xl font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl">
       {hero.tagline}
     </h1>
-    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600" set:html={renderMarkdown(hero.subhead)} />
-    <div class="mt-8 flex flex-wrap gap-4">
+    <p class="mt-6 max-w-2xl font-sans text-lg leading-normal text-periwinkle">
+      {hero.subhead}
+    </p>
+    <div class="mt-8">
       <a
-        href={links.substack}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-lg bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-dark"
+        href={withBase("/#get-involved")}
+        class="inline-block rounded-lg bg-accent px-6 py-3 font-sans text-sm font-medium text-white transition-colors hover:bg-accent-dark"
       >
-        {hero.substackCta}
-      </a>
-      <a
-        href="#get-involved"
-        class="rounded-lg bg-accent-secondary px-6 py-3 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-100"
-      >
-        {hero.getInvolvedCta}
+        {hero.cta}
       </a>
     </div>
   </div>
+  <img
+    src={withBase("/hero-decorator.svg")}
+    alt=""
+    aria-hidden="true"
+    class="pointer-events-none absolute right-0 bottom-0 w-[min(16.5rem,64vw)] select-none sm:w-[min(24rem,44vw)] lg:w-[min(31.5rem,38vw)]"
+  />
 </section>
-
-<script>
-  const slides = document.querySelectorAll("[data-hero-bg]");
-
-  if (slides.length > 1) {
-    let current = 0;
-    const interval = 5000;
-
-    setInterval(() => {
-      const next = (current + 1) % slides.length;
-      slides[current].style.opacity = "0";
-      slides[next].style.opacity = "1";
-      current = next;
-    }, interval);
-  }
-</script>

@@ -2,53 +2,73 @@
   "site": {
     "name": "AI Safety & Governance",
     "subtitle": "Western University",
-    "url": "https://jmuszka.github.io",
-    "base": "/aisw-website/",
-    "logo": "/logo_light_mono.svg",
+    "url": "https://aisw.ca",
+    "base": "/",
+    "logo": "/logo_light_color.svg",
+    "wordmark": "/text_light_color.svg",
     "footerBackground": "/footer-bg.webp"
   },
   "seo": {
     "title": "AI Safety & Governance | Western University",
-    "description": "AI Safety & Governance is a student society at Western University studying the technical and societal risks of advanced AI from computer science, policy, philosophy, and business perspectives.",
+    "description": "AISW is a student society at Western University tackling AI risks from technical, policy, and business perspectives.",
     "author": "Josh Muszka",
-    "ogImage": "/hero-technical.webp"
+    "ogImage": "/ai-safety-headlines.png"
   },
   "links": {
     "slack": "https://join.slack.com/t/aisafetygovernanceuwo/shared_invite/zt-46kpwzpxi-yR2EsmqizamXZ2LtEp1iSw",
-    "substack": "#"
+    "pathfinder": "https://pathfinder.kairos-project.org/"
   },
   "sender": {
     "formId": "bkR3qx"
   },
   "navLinks": [
     { "label": "About", "href": "/#about" },
-    { "label": "Our Approach", "href": "/#approach" },
+    { "label": "Why this matters", "href": "/#mission" },
     { "label": "Get Involved", "href": "/#get-involved" },
-    { "label": "Newsletter", "href": "/#newsletter" }
+    { "label": "Join", "href": "/join" }
   ],
   "hero": {
-    "tagline": "Understanding and governing advanced AI, from every angle",
-    "subhead": "A student society bringing together **technology, policy, philosophy, and business** perspectives to study the risks of AI and how to mitigate and adapt to them.",
-    "substackCta": "Read our Substack",
-    "getInvolvedCta": "Get Involved",
-    "backgrounds": [
-      "/hero-technical.webp",
-      "/hero-legal.webp",
-      "/hero-parliament.webp",
-      "/hero-business.webp"
-    ]
+    "tagline": "<0.6% of the AI field is working to make it safe.",
+    "subhead": "AISW is a student society tackling AI risks from technical, policy, and business perspectives.",
+    "cta": "Get Involved"
+  },
+  "headlines": {
+    "src": "/ai-safety-headlines.png",
+    "alt": "AI safety headlines from Politico, The New York Times, and Nature"
   },
   "mission": {
     "subtitle": "Why this matters",
     "paragraphs": [
-      "Advanced AI systems are being deployed faster than our understanding of how to make them safe, predictable, and accountable. This raises technical questions regarding **how we ensure an autonomous system will behave as intended**, as well as questions of policy, ethics, and institutional design: **who decides what these systems should be permitted to do, and how?**",
-      "AI Safety & Governance is a student society at Western University dedicated to studying these questions in depth. We read, discuss, and write about the technical and societal risks posed by advanced AI, and we work to build a community at Western capable of engaging with this problem from more than one direction.",
-      "**We believe this requires more than any single department or discipline can offer.**"
+      "Advanced AI systems are being deployed faster than our understanding of how to make them safe, predictable, and accountable. This raises questions: how do we ensure an autonomous system will behave as intended? How do we prevent bad actors from using them for harm?",
+      "AI Safety & Governance is a student society at Western. We discuss the risks posed by advanced AI, and foster a community at Western capable of engaging with this problem across disciplines."
+    ]
+  },
+  "fellowship": {
+    "title": "Get Involved",
+    "body": "Our 8-week introductory fellowship leads small groups through an interdisciplinary course covering how AI works, why it misbehaves, and what can be done about it through technical research and governance.",
+    "cta": "Apply now"
+  },
+  "network": {
+    "title": "University Group Network",
+    "body": "AISW is a part of an informal network of student AI safety groups at universities from Harvard to Hong Kong, financially supported by Kairos through the [Pathfinder Fellowship](https://pathfinder.kairos-project.org/)."
+  },
+  "mailingList": {
+    "title": "Get Involved",
+    "body": "Sign up to our mailing list to hear about fellowship deadlines, events, and AI safety opportunities."
+  },
+  "join": {
+    "title": "Fellowship applications open mid-September and mid-January",
+    "subhead": "Join our mailing list to be the first to hear when applications open and stay up to date on our programming and events.",
+    "stat": "<0.6% of the AI field is working to make it safe.",
+    "statSub": "Help us change that by launching your safety career.",
+    "perk": "Free weekly dinner included!",
+    "paragraphs": [
+      "Our 8-week fellowship introduces small groups of undergrad and grad students to interdisciplinary perspectives on AI risk. You’ll learn the perspectives of scientists dissecting AI brains, US-China AI policymakers, leading philosophers, and more.",
+      "Fellows also receive career guidance, and advice on how to apply to the 200+ AI safety fellowships, graduate programs, and internships that help new grads break into an impactful career."
     ]
   },
   "approach": {
-    "title": "Our Approach",
-    "intro": "AI risk isn't purely a technical problem or a policy problem: it spans computer science, public policy, philosophy and ethics, economics, and law. We think that's a strength, not a complication.",
+    "title": "Fellowship Content",
     "pillars": [
       {
         "title": "Technical",
@@ -65,21 +85,7 @@
         "icon": "Brain",
         "body": "Asking what 'safe' and 'aligned' actually mean: questions of value, uncertainty, and responsibility that technical work alone cannot answer."
       }
-    ],
-    "more": {
-      "title": "+ More",
-      "body": "We are growing to include economics, law, and other disciplines. If you think that your field belongs in this conversation, then it probably does."
-    }
-  },
-  "getInvolved": {
-    "title": "Get Involved",
-    "body": "AI Safety & Governance is a new society at Western, and we are building our programming from the ground up. If you're interested in getting involved as a member, contributor, or collaborator, reach out below.",
-    "cta": "Join our Slack"
-  },
-  "newsletter": {
-    "title": "Newsletter",
-    "body": "Follow our Substack for our writing on AI safety and governance.",
-    "cta": "Visit our Substack"
+    ]
   },
   "footer": {
     "disclaimer": "AI Safety & Governance is a student society and is not officially affiliated with Western University."

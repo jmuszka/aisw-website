@@ -1,0 +1,18 @@
+---
+import data from "../data/site.json";
+import { renderMarkdown } from "../lib/markdown";
+
+const { network } = data;
+---
+
+<section id="network" class="scroll-mt-24 bg-platinum">
+  <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+    <h2 class="max-w-3xl font-serif text-3xl font-bold tracking-tight text-black sm:text-4xl">
+      {network.title}
+    </h2>
+    <p
+      class="mt-6 max-w-3xl font-sans text-lg leading-normal text-black [&_a]:text-subheading [&_a]:underline [&_a]:underline-offset-2 [&_a]:transition-colors hover:[&_a]:text-amethyst"
+      set:html={renderMarkdown(network.body)}
+    />
+  </div>
+</section>

@@ -1,0 +1,24 @@
+---
+import data from "../data/site.json";
+import MailingListForm from "./MailingListForm.astro";
+
+const { mailingList } = data;
+---
+
+<section id="mailing-list" class="scroll-mt-24 border-b border-black/10 bg-platinum">
+  <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+    <div class="flex flex-col gap-10 md:flex-row md:items-start md:gap-16">
+      <div class="min-w-0 flex-1">
+        <h2 class="font-serif text-3xl font-bold tracking-tight text-black sm:text-4xl">
+          {mailingList.title}
+        </h2>
+        <p class="mt-6 font-sans text-lg leading-normal text-black">
+          {mailingList.body}
+        </p>
+      </div>
+      <div class="w-full max-w-md shrink-0 md:max-w-sm lg:max-w-md">
+        <MailingListForm />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,39 +1,31 @@
 ---
 import data from "../data/site.json";
-import { renderMarkdown } from "../lib/markdown";
 import Icon from "./Icon.astro";
 
 const { approach } = data;
 ---
 
-<section id="approach" class="scroll-mt-24 border-b border-slate-200">
+<section id="fellowship-content" class="scroll-mt-24 border-b border-black/10 bg-platinum">
   <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
-    <h2 class="max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+    <h2 class="max-w-3xl font-serif text-3xl font-bold tracking-tight text-black sm:text-4xl">
       {approach.title}
     </h2>
-    <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600" set:html={renderMarkdown(approach.intro)} />
 
-    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-12 grid gap-6 sm:grid-cols-3">
       {
         approach.pillars.map((pillar) => (
-          <div class="rounded-xl border border-accent-secondary/40 bg-accent-secondary/25 p-6 transition-transform duration-200 hover:scale-[1.03]">
+          <div class="rounded-xl border border-periwinkle/40 bg-periwinkle/20 p-6 transition-transform duration-200 hover:scale-[1.03]">
             {pillar.icon && (
               <Icon
                 name={pillar.icon}
-                class="mb-4 h-7 w-7 text-accent"
+                class="mb-4 h-7 w-7 text-subheading"
               />
             )}
-            <h3 class="text-lg font-semibold text-slate-900">{pillar.title}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600" set:html={renderMarkdown(pillar.body)} />
+            <h3 class="font-sans text-lg font-bold text-black">{pillar.title}</h3>
+            <p class="mt-3 font-sans text-sm leading-normal text-black">{pillar.body}</p>
           </div>
         ))
       }
-      <div class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 transition-transform duration-200 hover:scale-[1.03]">
-        <h3 class="text-lg font-semibold text-slate-900">
-          {approach.more.title}
-        </h3>
-        <p class="mt-3 text-sm leading-relaxed text-slate-600" set:html={renderMarkdown(approach.more.body)} />
-      </div>
     </div>
   </div>
 </section>
