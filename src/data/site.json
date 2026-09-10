@@ -25,7 +25,7 @@
     { "label": "About", "href": "/#about" },
     { "label": "Why this matters", "href": "/#mission" },
     { "label": "Get Involved", "href": "/#get-involved" },
-    { "label": "Join", "href": "/join" }
+    { "label": "Join", "href": "/apply" }
   ],
   "hero": {
     "tagline": "<0.6% of the AI field is working to make it safe.",
@@ -44,7 +44,7 @@
     ]
   },
   "fellowship": {
-    "title": "Get Involved",
+    "title": "Launch your AI safety career with our fellowship",
     "body": "Our 8-week introductory fellowship leads small groups through an interdisciplinary course covering how AI works, why it misbehaves, and what can be done about it through technical research and governance.",
     "cta": "Apply now"
   },
