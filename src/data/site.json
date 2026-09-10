@@ -25,7 +25,7 @@
     { "label": "About", "href": "/#about" },
     { "label": "Why this matters", "href": "/#mission" },
     { "label": "Get Involved", "href": "/#get-involved" },
-    { "label": "Join", "href": "/join" }
+    { "label": "Join", "href": "/apply" }
   ],
   "hero": {
     "tagline": "<0.6% of the AI field is working to make it safe.",
