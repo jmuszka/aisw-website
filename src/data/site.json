@@ -52,6 +52,30 @@
     "title": "University Group Network",
     "body": "AISW is a part of an informal network of student AI safety groups at universities from Harvard to Hong Kong, financially supported by Kairos through the [Pathfinder Fellowship](https://pathfinder.kairos-project.org/)."
   },
+  "alumni": {
+    "title": "Western Alumni & Faculty in AI Safety",
+    "subtitle": "From Western to the frontier of making AI safe.",
+    "people": [
+      {
+        "name": "Firstname Lastname",
+        "headshot": "/sam-ramadori.jpg",
+        "atWestern": "What he studied/did",
+        "now": "A brief paragraph describing what he does today."
+      },
+      {
+        "name": "Firstname Lastname",
+        "headshot": "/profile.png",
+        "atWestern": "What she studied/did",
+        "now": "A brief paragraph describing what she does today."
+      },
+      {
+        "name": "Firstname Lastname",
+        "headshot": "/1672349607910.jpg",
+        "atWestern": "What she studied/did",
+        "now": "A brief paragraph describing what she does today."
+      }
+    ]
+  },
   "mailingList": {
     "title": "Get Involved",
     "body": "Sign up to our mailing list to hear about fellowship deadlines, events, and AI safety opportunities."
