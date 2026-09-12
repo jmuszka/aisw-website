@@ -4,9 +4,10 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Approach from "../components/Approach.astro";
 import MailingListForm from "../components/MailingListForm.astro";
+import { renderMarkdown } from "../lib/markdown";
 import data from "../data/site.json";
 
-const { join } = data;
+const { join, mailingList } = data;
 ---
 
 <Layout
@@ -28,6 +29,10 @@ const { join } = data;
           </div>
           <div class="w-full max-w-md shrink-0 md:max-w-sm lg:max-w-md">
             <MailingListForm />
+            <p
+              class="mt-6 font-sans text-md leading-normal text-black [&_a]:text-subheading [&_a]:underline [&_a]:underline-offset-2 [&_a]:transition-colors hover:[&_a]:text-amethyst"
+              set:html={renderMarkdown(mailingList.contact)}
+            />
           </div>
         </div>
       </div>
