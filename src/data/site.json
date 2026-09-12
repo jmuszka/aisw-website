@@ -46,11 +46,13 @@
   "fellowship": {
     "title": "Launch your AI safety career with our fellowship",
     "body": "Our 8-week introductory fellowship leads small groups through an interdisciplinary course covering how AI works, why it misbehaves, and what can be done about it through technical research and governance.",
-    "cta": "Apply now"
+    "cta": "Apply now",
+    "decorator": "/envelope.svg"
   },
   "network": {
     "title": "University Group Network",
-    "body": "AISW is a part of an informal network of student AI safety groups at universities from Harvard to Hong Kong, financially supported by Kairos through the [Pathfinder Fellowship](https://pathfinder.kairos-project.org/)."
+    "body": "AISW is a part of an informal network of student AI safety groups at universities from Harvard to Hong Kong, financially supported by Kairos through the [Pathfinder Fellowship](https://pathfinder.kairos-project.org/).",
+    "decorator": "/group.svg"
   },
   "alumni": {
     "title": "Western Alumni & Faculty in AI Safety",
