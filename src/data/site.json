@@ -59,10 +59,10 @@
     "subtitle": "From Western to the frontier of making AI safe.",
     "people": [
       {
-        "name": "Firstname Lastname",
+        "name": "Sam Ramadori",
         "headshot": "/sam-ramadori.jpg",
-        "atWestern": "What he studied/did",
-        "now": "A brief paragraph describing what he does today."
+        "atWestern": "MBA (Ivey)",
+        "now": "Sam serves as the Co-President and Executive Director of LawZero, a nonprofit AI safety research organization he leads alongside Turing Award winner Yoshua Bengio. In this role, he oversees the organization's strategic, operational, and development efforts toward creating \"safe-by-design\" foundational AI systems that prioritize truthfulness, accountability, and public good. Additionally, he serves as an Ivey AI Fellow at Western University's Ivey Business School and works as an executive consultant in the climate and AI technology sectors."
       },
       {
         "name": "Firstname Lastname",
@@ -71,10 +71,10 @@
         "now": "A brief paragraph describing what she does today."
       },
       {
-        "name": "Firstname Lastname",
+        "name": "Ashyana-Jasmine Kachra ",
         "headshot": "/1672349607910.jpg",
-        "atWestern": "What she studied/did",
-        "now": "A brief paragraph describing what she does today."
+        "atWestern": "B.A. - Honours Specialization in Political Science",
+        "now": "Ashyana-Jasmine currently serves as the Harmful Manipulation Lead at Google DeepMind in London, UK. In this role, she focuses on frontier risks, specifically researching and evaluating AI models to mitigate deceptive behaviors and prevent artificial intelligence from being misused to manipulate human thoughts and beliefs. Prior to taking on this lead position, she served as an AI Ethics & Safety Manager at Google DeepMind."
       }
     ]
   },
