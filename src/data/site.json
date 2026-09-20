@@ -46,15 +46,42 @@
   "fellowship": {
     "title": "Launch your AI safety career with our fellowship",
     "body": "Our 8-week introductory fellowship leads small groups through an interdisciplinary course covering how AI works, why it misbehaves, and what can be done about it through technical research and governance.",
-    "cta": "Apply now"
+    "cta": "Apply now",
+    "decorator": "/envelope.svg"
   },
   "network": {
     "title": "University Group Network",
-    "body": "AISW is a part of an informal network of student AI safety groups at universities from Harvard to Hong Kong, financially supported by Kairos through the [Pathfinder Fellowship](https://pathfinder.kairos-project.org/)."
+    "body": "AISW is a part of an informal network of student AI safety groups at universities from Harvard to Hong Kong, financially supported by Kairos through the [Pathfinder Fellowship](https://pathfinder.kairos-project.org/).",
+    "decorator": "/group.svg"
+  },
+  "alumni": {
+    "title": "Western Alumni & Faculty in AI Safety",
+    "subtitle": "From Western to the frontier of making AI safe.",
+    "people": [
+      {
+        "name": "Sam Ramadori",
+        "headshot": "/sam-ramadori.jpg",
+        "atWestern": "MBA (Ivey)",
+        "now": "Sam serves as the Co-President and Executive Director of LawZero, a nonprofit AI safety research organization he leads alongside Turing Award winner Yoshua Bengio. In this role, he oversees the organization's strategic, operational, and development efforts toward creating \"safe-by-design\" foundational AI systems that prioritize truthfulness, accountability, and public good. Additionally, he serves as an Ivey AI Fellow at Western University's Ivey Business School and works as an executive consultant in the climate and AI technology sectors."
+      },
+      {
+        "name": "Atrisha Sarkar",
+        "headshot": "/profile.png",
+        "atWestern": "Assistant Professor, Dept. of Electrical and Computer Engineering",
+        "now": "Today, Dr. Sarkar serves as an Assistant Professor in the Department of Electrical and Computer Engineering at Western University, where her research focuses on multiagent systems, behavioral game theory, and computational methods for human-centric AI safety. In the broader AI landscape, she investigates both individual and societal-level AI impacts—addressing safety challenges in autonomous vehicles, human-AI interaction dynamics, and online polarization. Beyond her core engineering appointment, she actively contributes to interdisciplinary AI governance and ethics as a Faculty Affiliate at the Schwartz Reisman Institute for Technology and Society, a member of Western's Rotman Institute of Philosophy, and a member of the Computational Institutional Science Lab."
+      },
+      {
+        "name": "Ashyana-Jasmine Kachra ",
+        "headshot": "/1672349607910.jpg",
+        "atWestern": "B.A. - Honours Specialization in Political Science",
+        "now": "Ashyana-Jasmine currently serves as the Harmful Manipulation Lead at Google DeepMind in London, UK. In this role, she focuses on frontier risks, specifically researching and evaluating AI models to mitigate deceptive behaviors and prevent artificial intelligence from being misused to manipulate human thoughts and beliefs. Prior to taking on this lead position, she served as an AI Ethics & Safety Manager at Google DeepMind."
+      }
+    ]
   },
   "mailingList": {
     "title": "Get Involved",
-    "body": "Sign up to our mailing list to hear about fellowship deadlines, events, and AI safety opportunities."
+    "body": "Sign up to our mailing list to hear about fellowship deadlines, events, and AI safety opportunities.",
+    "contact": "Questions? Contact us at [info@aisw.ca](mailto:info@aisw.ca)."
   },
   "join": {
     "pageTitle": "Apply to the Fall 2026 Fellowship | Western University",

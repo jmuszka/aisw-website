@@ -1,6 +1,7 @@
 ---
 import data from "../data/site.json";
 import MailingListForm from "./MailingListForm.astro";
+import { renderMarkdown } from "../lib/markdown";
 
 const { mailingList } = data;
 ---
@@ -18,6 +19,10 @@ const { mailingList } = data;
       </div>
       <div class="w-full max-w-md shrink-0 md:max-w-sm lg:max-w-md">
         <MailingListForm />
+        <p
+          class="mt-6 font-sans text-md leading-normal text-black [&_a]:text-subheading [&_a]:underline [&_a]:underline-offset-2 [&_a]:transition-colors hover:[&_a]:text-amethyst"
+          set:html={renderMarkdown(mailingList.contact)}
+        />
       </div>
     </div>
   </div>
