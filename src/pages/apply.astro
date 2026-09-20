@@ -4,25 +4,91 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Approach from "../components/Approach.astro";
 import MailingListForm from "../components/MailingListForm.astro";
-import { renderMarkdown } from "../lib/markdown";
 import data from "../data/site.json";
+import { renderMarkdown } from "../lib/markdown";
 
 const { join, mailingList } = data;
+
+const linkClasses =
+  "[&_a]:text-subheading [&_a]:underline [&_a]:underline-offset-2 [&_a]:transition-colors hover:[&_a]:text-amethyst";
 ---
 
-<Layout
-  title="Join the AISW Fellowship | Western University"
-  description="Fellowship applications open mid-September and mid-January. Join the AISW mailing list and launch a career in AI safety."
->
+<Layout title={join.pageTitle} description={join.pageDescription}>
   <Navbar />
   <main>
     <section class="border-b border-black/10 bg-platinum">
       <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+        <h1 class="max-w-3xl font-serif text-4xl font-bold tracking-tight text-black sm:text-5xl">
+          {join.headline}
+        </h1>
+        <p class="mt-6 font-sans text-xl font-bold leading-normal text-subheading">
+          {join.kicker}
+        </p>
+        <a
+          href={join.applyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-block rounded-lg bg-accent px-6 py-3 font-sans text-sm font-bold text-white transition-colors hover:bg-accent-dark"
+        >
+          {join.applyCta}
+        </a>
+        <div class={`mt-8 max-w-3xl space-y-6 font-sans text-lg leading-normal text-black ${linkClasses}`}>
+          {join.paragraphs.map((paragraph) => <p set:html={renderMarkdown(paragraph)} />)}
+        </div>
+
+        <h3 class="mt-12 max-w-3xl font-sans text-xl font-bold text-black">
+          {join.faq.title}
+        </h3>
+        <p class="mt-4 max-w-3xl font-sans text-lg leading-normal text-black">
+          {join.faq.body}
+        </p>
+        <ul class="mt-4 max-w-3xl list-disc space-y-2 pl-6 font-sans text-lg leading-normal text-black">
+          {join.faq.bullets.map((bullet) => <li>{bullet}</li>)}
+        </ul>
+        <p
+          class={`mt-8 max-w-3xl font-sans text-lg leading-normal text-black ${linkClasses}`}
+          set:html={renderMarkdown(join.contact)}
+        />
+      </div>
+    </section>
+
+    <Approach />
+
+    <section class="border-b border-black/10 bg-platinum">
+      <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+        <p class="max-w-3xl font-sans text-lg leading-normal text-black">
+          {join.curriculumIntro}
+        </p>
+        <ul class="mt-6 max-w-3xl list-disc space-y-3 pl-6 font-sans text-lg leading-normal text-black">
+          {
+            join.curriculum.map((item) => (
+              <li>
+                {"children" in item && item.children ? (
+                  <>
+                    <span class="font-bold">{item.title}</span>
+                    <ul class="mt-2 list-disc space-y-2 pl-6">
+                      {item.children.map((child) => (
+                        <li>{child}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  item.title
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="border-b border-black/10 bg-platinum">
+      <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
         <div class="flex flex-col gap-10 md:flex-row md:items-start md:gap-16">
           <div class="min-w-0 flex-1">
-            <h1 class="font-serif text-4xl font-bold tracking-tight text-black sm:text-5xl">
+            <h2 class="font-serif text-4xl font-bold tracking-tight text-black sm:text-5xl">
               {join.title}
-            </h1>
+            </h2>
             <p class="mt-6 font-sans text-xl font-bold leading-normal text-subheading">
               {join.subhead}
             </p>
@@ -37,25 +103,6 @@ const { join, mailingList } = data;
         </div>
       </div>
     </section>
-
-    <section class="border-b border-black/10 bg-platinum">
-      <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32">
-        <h2 class="max-w-3xl font-serif text-4xl font-bold tracking-tight text-black sm:text-5xl">
-          {join.stat}
-        </h2>
-        <p class="mt-6 max-w-2xl font-sans text-lg font-bold leading-normal text-subheading">
-          {join.statSub}
-        </p>
-        <p class="mt-4 font-serif text-lg italic text-accent-dark">
-          {join.perk}
-        </p>
-        <div class="mt-8 max-w-3xl space-y-6 font-sans text-lg leading-normal text-black">
-          {join.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-        </div>
-      </div>
-    </section>
-
-    <Approach />
   </main>
   <Footer />
 </Layout>

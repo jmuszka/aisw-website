@@ -84,15 +84,62 @@
     "contact": "Questions? Contact us at [info@aisw.ca](mailto:info@aisw.ca)."
   },
   "join": {
-    "title": "Fellowship applications open mid-September and mid-January",
-    "subhead": "Join our mailing list to be the first to hear when applications open and stay up to date on our programming and events.",
-    "stat": "<0.6% of the AI field is working to make it safe.",
-    "statSub": "Help us change that by launching your safety career.",
-    "perk": "Free weekly dinner included!",
+    "pageTitle": "Apply to the Fall 2026 Fellowship | Western University",
+    "pageDescription": "Applications are open for AISW’s 8-week Fall 2026 fellowship. Apply by September 30 to launch your AI safety career.",
+    "headline": "Launch your AI safety career",
+    "kicker": "Applications Open: Fall 2026 Fellowship",
+    "applyUrl": "https://forms.gle/9V2QcVsdXhJQthhX7",
+    "applyCta": "Apply Here",
     "paragraphs": [
-      "Our 8-week fellowship introduces small groups of undergrad and grad students to interdisciplinary perspectives on AI risk. You’ll learn the perspectives of scientists dissecting AI brains, US-China AI policymakers, leading philosophers, and more.",
-      "Fellows also receive career guidance, and advice on how to apply to the 200+ AI safety fellowships, graduate programs, and internships that help new grads break into an impactful career."
-    ]
+      "Apply to our 8-week seminar-style fellowship (dinner included every week!) by September 30. Our fellowship helps you upskill so you're ready for the 120+ AI safety internships, grad programs, and other opportunities in this fast-growing field. The fellowship is interdisciplinary and open to undergrads, grad students, and anyone else in the Western University community from any department.",
+      "You might have heard that, recently, OpenAI’s AI agents have been escaping their containers and hacking other companies (the “Hugging Face incident”), or that LLMs can help scientists with certain aspects of designing toxins and viruses (*Nature*). With fewer than 0.6% of people in the AI field working on safety, more talent is needed to combat these risks.",
+      "Western AI Safety and Governance is a student group backed by Kairos, an AI safety non-profit.",
+      "The fellowship will tentatively run from October 5 to November 30. It will involve 1-2 hours of reading and a meeting each week."
+    ],
+    "faq": {
+      "title": "Do I need to know a lot about AI to apply?",
+      "body": "No! Diverse backgrounds are needed in AI safety.",
+      "bullets": [
+        "Philosophy, social science, and political science students can help design laws and international cooperation frameworks surrounding AI development.",
+        "Business students can help fill the critical shortage of operations and entrepreneurship skills in AI safety organizations.",
+        "Math students are needed to tackle tough theoretical and empirical safety problems.",
+        "CS and engineering students can help build guardrails and train AIs to be aligned with human interests."
+      ]
+    },
+    "contact": "Questions? Email us at [info@aisw.ca](mailto:info@aisw.ca), and check out our site at [aisw.ca](https://aisw.ca).",
+    "curriculumIntro": "Topics could tentatively include:",
+    "curriculum": [
+      {
+        "title": "Intro to AI/deep learning (no background needed, first session only)"
+      },
+      {
+        "title": "Forecasting and AI progress trends"
+      },
+      {
+        "title": "Strategy",
+        "children": ["Pathways to harm from advanced AI"]
+      },
+      {
+        "title": "Brief intro to technical AI safety (no background required)",
+        "children": [
+          "Reinforcement learning from human feedback",
+          "Scalable oversight engineering",
+          "Technical governance",
+          "Careers in technical AI safety"
+        ]
+      },
+      {
+        "title": "Policy",
+        "children": [
+          "Strategies for developing and regulating AI (e.g., centralized vs. laissez-faire)",
+          "Overview of key actors",
+          "Canada’s role in international cooperation",
+          "Careers in AI governance"
+        ]
+      }
+    ],
+    "title": "Fellowship applications open mid-September and mid-January",
+    "subhead": "Join our mailing list to be the first to hear when applications open and stay up to date on our programming and events."
   },
   "approach": {
     "title": "Fellowship Content",
